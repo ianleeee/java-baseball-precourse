@@ -15,6 +15,5 @@ public class BaseballGameApplication {
 
         // 숫자 야구 게임 실행
         gameController.run();
-
     }
 }

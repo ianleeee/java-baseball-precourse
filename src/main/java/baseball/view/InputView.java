@@ -13,4 +13,9 @@ public class InputView {
         System.out.print("숫자를 입력해주세요 : ");
         return br.readLine();
     }
+
+    // 재시작 여부 입력 수집 (1 또는 2)
+    public String readRestart() throws IOException {
+        return br.readLine();
+    }
 }
