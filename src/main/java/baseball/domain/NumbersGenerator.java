@@ -1,8 +1,6 @@
 package baseball.domain;
 
-import java.util.HashSet;
-import java.util.Random;
-import java.util.Set;
+import java.util.*;
 
 /**
  * 컴퓨터가 사용할 숫자 3개를 생성하는 역할을 담당
@@ -40,14 +38,14 @@ public class NumbersGenerator {
 
     // 생성된 숫자 Set를 배열 형태로 변환
     private int[] toArray(Set<Integer> numbers) {
+        // 오름차순으로되는 것을 막기 위해 shuffle로 순서 섞기 로직 추가
+        List<Integer> list = new ArrayList<>(numbers);
+        Collections.shuffle(list, random);
+
         int[] result = new int[SIZE];
-        int index = 0;
-
-        for (int number : numbers) {
-            result[index] = number;
-            index++;
+        for (int i = 0; i < SIZE; i++) {
+            result[i] = list.get(i);
         }
-
         return result;
     }
 }
