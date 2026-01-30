@@ -8,10 +8,19 @@ public class ComputerNumbers {
         this.digits = digits;
     }
 
-
     // 특정 위치의 숫자 조회
     public int digitAt(int index) {
         return digits[index];
+    }
+
+    // 숫자가 포함되어 있는지 여부 반환
+    public boolean contains(int value) {
+        for (int digit : digits) {
+            if (digit == value) {
+                return true;
+            }
+        }
+        return false;
     }
 
     // 디버깅 용
