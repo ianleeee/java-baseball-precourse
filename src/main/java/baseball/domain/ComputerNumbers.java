@@ -17,6 +17,6 @@ public class ComputerNumbers {
     // 디버깅 용
     @Override
     public String toString() {
-        return "digits: " + digits[0] + digits[1] + digits[2];
+        return "컴퓨터가 생성한 숫자: " + digits[0] + digits[1] + digits[2];
     }
 }
